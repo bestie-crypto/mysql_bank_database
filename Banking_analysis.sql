@@ -21,6 +21,7 @@ foreign key(customerid)
 references customers(customerid));
 
 
+
 create table Transactions
 (TransactionID int primary key auto_increment,
 AccountID int ,
@@ -147,7 +148,7 @@ select concat (customers.firstname," ",customers.lastname)As "Customer Name" ,Ac
 from customers
 inner join
 Accounts on customers.customerid = Accounts.customerid
-where Accounts. balance > 100;
+where Accounts. balance > 100000;
 
 -- Arrange customers by account balance from highest to lowest--
 select concat(customers.firstname," ",customers.lastname)As "Coustomer Name", Accounts.Balance As "Account Balance"
@@ -299,6 +300,75 @@ accounts on customers.customerid = accounts.customerid
 left join
 transactions on accounts.AccountID = transactions.AccountID
 order by customers.customerid;
+
+
+
+
+
+--  Count customers, accounts, and branches
+SELECT
+    (SELECT COUNT(*) FROM customers) AS total_customers,
+    (SELECT COUNT(*) FROM Accounts) AS total_accounts,
+    (SELECT COUNT(*) FROM Branches) AS total_branches;
+
+--  Analyze transactions by type
+SELECT
+    Transactiontype,
+    COUNT(*) AS transaction_count,
+    SUM(Amount) AS total_amount,
+    AVG(Amount) AS average_amount
+FROM Transactions
+GROUP BY Transactiontype
+ORDER BY total_amount DESC;
+
+--  Find the accounts with the highest balances
+SELECT
+    c.FirstName,
+    c.LastName,
+    a.Accountnumber,
+    a.Accounttype,
+    a.Balance
+FROM customers c
+JOIN Accounts a ON c.customerid = a.customerid
+ORDER BY a.Balance DESC
+LIMIT 5;
+
+--  Analyze loan amounts by interest rate
+SELECT
+    InterestRate,
+    COUNT(*) AS number_of_loans,
+    SUM(LoanAmount) AS total_loan_amount,
+    AVG(LoanAmount) AS average_loan_amount
+FROM Loan
+GROUP BY InterestRate
+ORDER BY InterestRate;
+
+--  Calculate the total balance held in all accounts
+SELECT
+    SUM(Balance) AS total_account_balance,
+    AVG(Balance) AS average_account_balance
+FROM Accounts;
+
+--  Analyze account distribution by branch
+SELECT
+    b.BranchName,
+    b.Location,
+    COUNT(a.AccountID) AS total_accounts,
+    COALESCE(SUM(a.Balance), 0) AS total_account_balance
+FROM Branches b
+LEFT JOIN Accounts a ON b.BranchID = a.BranchID
+GROUP BY b.BranchID, b.BranchName, b.Location
+ORDER BY total_account_balance DESC;
+
+-- Find customers who have no transactions
+SELECT
+    c.CustomerID,
+    c.FirstName,
+    c.LastName
+FROM customers c
+LEFT JOIN Accounts a ON c.CustomerID = a.CustomerID
+LEFT JOIN Transactions t ON a.AccountID = t.AccountID
+WHERE t.TransactionID IS NULL;
 
 
 
