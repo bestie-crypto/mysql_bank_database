@@ -38,15 +38,22 @@ This project should use fictional or anonymized sample data for demonstration an
 
 ## SQL Analysis Results
 
+
+## SQL Analysis Results
+
 ### 1. Transaction Analysis
-![Transaction Analysis](transaction_analysis.png)
+
+![Transaction Analysis](Transaction_analysis.png)
 
 ### 2. Branch Analysis
-![Branch Analysis](branch%20analysis.png)
+
+![Branch Analysis](Branch_analysis.png)
+
 
 
 ## Author
  Emmanuel Best Maobughichi
+ Data analyst.
  
  
 
