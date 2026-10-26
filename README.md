@@ -69,6 +69,44 @@ The project provides a foundation for further banking data analysis, including i
 
 *Note: These findings are based on the sample data used in this project and do not represent actual banking operations.*
 
+## Business Questions and Insights
+
+This project uses SQL to answer practical questions about banking operations using sample data.
+
+### Business Questions
+
+1. **Who are the customers with the highest account balances?**  
+   Identify customers with the largest balances to understand how funds are distributed among account holders.
+
+2. **Which transaction type has the highest total transaction amount?**  
+   Compare deposits, withdrawals, and transfers by transaction count and total amount.
+
+3. **How much money is held across all customer accounts?**  
+   Calculate the total and average account balances.
+
+4. **Which branches hold the highest total account balances?**  
+   Compare account balances across branches to understand the distribution of funds by location.
+
+5. **How are loans distributed across interest rates?**  
+   Group loans by interest rate and compare the number and total value of loans at each rate.
+
+6. **Which customers have no recorded transactions?**  
+   Identify accounts that may require further review or customer engagement.
+
+### Key Insights from the Sample Data
+
+- **Total account balance:** ₦5,886,124.
+- **Average account balance:** ₦588,612.40.
+- **Total recorded loan amount:** ₦540,000.
+- **Transaction activity:** 10 transactions are recorded in the sample dataset.
+- **Branch distribution:** The database contains 10 branches, allowing comparisons of account balances by location.
+
+### Business Value
+
+These analyses can help a banking team understand account balances, monitor transaction activity, review loan portfolios, and compare branch-level performance. In a real banking environment, these findings would need to be validated against complete and reconciled records before making business decisions.
+
+*All records in this project are sample data and should not be interpreted as actual customer or banking information.*
+
 
 
 ## Author
