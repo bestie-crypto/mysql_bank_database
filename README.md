@@ -36,6 +36,17 @@ The repository contains SQL files exported from MySQL Workbench for the database
 ## Data Privacy
 This project should use fictional or anonymized sample data for demonstration and learning purposes. No confidential customer information should be published.
 
+## SQL Analysis Results
+
+### 1. Transaction Analysis
+![Transaction Analysis](transaction_analysis.png)
+
+### 2. Branch Analysis
+![Branch Analysis](branch%20analysis.png)
+
+
 ## Author
- Data Analyst
+ Emmanuel Best Maobughichi
+ 
+ 
 
