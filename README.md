@@ -107,6 +107,44 @@ These analyses can help a banking team understand account balances, monitor tran
 
 *All records in this project are sample data and should not be interpreted as actual customer or banking information.*
 
+## Banking System Dashboard
+
+### Project Overview
+This project includes an interactive Banking System Dashboard developed using Power BI and MySQL. It provides insights into customer accounts, transactions, loans, and branch performance.
+
+### Tools Used
+- MySQL – Database management and SQL queries.
+- Power BI – Data visualization and dashboard development.
+
+### Dashboard Features
+- Total Account Balance
+- Total Customers
+- Total Transactions
+- Total Loans
+- Transaction Analysis by Type
+- Loan Analysis by Interest Rate
+- Branch Performance Analysis
+- Interactive slicers for Account Type, Branch Name, and Transaction Type
+
+### Dashboard Screenshots
+
+## Banking System Dashboard
+
+### Dashboard Screenshots
+
+![Banking Dashboard - Screenshot 1](https://github.com/bestie-crypto/mysql_bank_database/blob/main/BANKING%20DASHBOARD%20SCREENSHORT.png?raw=true)
+
+![Banking Dashboard - Screenshot 2](https://github.com/bestie-crypto/mysql_bank_database/blob/main/BANKING%20DASHBOARD%20SCREENSHOT%202.png?raw=true)
+
+### Download Project Files
+
+- [Download Banking Dashboard (PBIX)](https://github.com/bestie-crypto/mysql_bank_database/blob/main/BANKING%20DASHBOARD.pbix)
+
+- [Download Banking Dashboard Template (PBIT)](https://github.com/bestie-crypto/mysql_bank_database/blob/main/BANKING%20SYSTEM%20DASHBOARD.pbit)
+
+
+
+
 
 
 ## Author
